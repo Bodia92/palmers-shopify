@@ -1,0 +1,268 @@
+{
+  "sections": {
+    "1652310232899c51b0": {
+      "type": "slideshow",
+      "blocks": {
+        "1652310232bbf53b45-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/locally-owned-banner_1800x_4fb69d38-4bfd-4e40-b159-fa352e0985ed.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/locally-owned-banner_mob.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "1652310232bbf53b45-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegepod-Website-Front-Page-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Vegepod-Shopify-banner-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_text": "",
+            "link": "shopify:\/\/collections\/vegepod"
+          }
+        },
+        "d2e865d4-6282-4112-a2aa-ee39826a414c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13150-Spring-1-Shopify-desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/13150-Spring-1-Shopify-mob.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/buzzing-about-spring"
+          }
+        },
+        "5e4d26e8-538d-490b-9830-87ebab445e16": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13144-Pre-Spring-Shopify-desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/13144-Pre-Spring-Shopify-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/pre-spring-sale"
+          }
+        }
+      },
+      "block_order": [
+        "1652310232bbf53b45-0",
+        "1652310232bbf53b45-1",
+        "d2e865d4-6282-4112-a2aa-ee39826a414c",
+        "5e4d26e8-538d-490b-9830-87ebab445e16"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "16301906615df2e9a4": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "html": "<div style=\"background:#E71454 ;padding:10px;text-align:center\"><p style=\"color:#FFF;font-weight:800;font-size:24px\">Christmas Gift Ideas<\/p><\/div>"
+      }
+    },
+    "163831718488b9148b": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "16383171844e9eb4ae-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-for-everyone",
+            "link": ""
+          }
+        },
+        "16383171844e9eb4ae-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-for-the-gardener",
+            "link": ""
+          }
+        },
+        "16383171844e9eb4ae-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-for-foodies",
+            "link": ""
+          }
+        },
+        "16383171844e9eb4ae-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-for-the-outdoorsy",
+            "link": ""
+          }
+        },
+        "16383171844e9eb4ae-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-to-stuff-stockings",
+            "link": ""
+          }
+        },
+        "16383171844e9eb4ae-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "christmas-collection-gifts-for-the-little-ones",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16383171844e9eb4ae-0",
+        "16383171844e9eb4ae-1",
+        "16383171844e9eb4ae-2",
+        "16383171844e9eb4ae-3",
+        "16383171844e9eb4ae-4",
+        "16383171844e9eb4ae-5"
+      ],
+      "settings": {
+        "title": "",
+        "link_title": "",
+        "link": "",
+        "round_images": false,
+        "show_collection_title": false
+      }
+    },
+    "1647771533bb280d6a": {
+      "type": "collection-with-image",
+      "settings": {
+        "collection": "house-plants",
+        "products_count": 12,
+        "image": "shopify:\/\/shop_images\/House-plants-bg.jpg",
+        "background": "#8bc53f",
+        "text_color": "#ffffff",
+        "title": "House Plants",
+        "content": "",
+        "button_background": "#ffffff",
+        "button_text_color": "#008a00",
+        "button_text": "View all",
+        "button_link": "shopify:\/\/collections\/house-plants"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "garden-plants",
+            "image": "shopify:\/\/shop_images\/Plant-image-for-web_300x_be48e6e7-3ff1-4bf7-a11b-7f197d78009d.jpg",
+            "link": ""
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "herbs",
+            "image": "shopify:\/\/shop_images\/Vege-and-herb-image-fr-web_300x_3f85be8d-eb5e-4e41-a952-a6aac862576d.jpg",
+            "link": ""
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "gardening-supplies",
+            "image": "shopify:\/\/shop_images\/Gardening-accessories-Palmers_300x_5ec52b3f-02f4-4240-8c32-41c489194044.jpg",
+            "link": ""
+          }
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "garden-tools-gloves",
+            "image": "shopify:\/\/shop_images\/Garden-tools-web-image-Palmers_300x_3261e239-5e55-42ac-915b-695af1dab114.jpg",
+            "link": "shopify:\/\/collections\/garden-tools-gloves"
+          }
+        },
+        "aaa22e5b-04c5-49bb-96b9-d72c79f21f1b": {
+          "type": "collection",
+          "settings": {
+            "collection": "lawns",
+            "image": "shopify:\/\/shop_images\/Lawn-kid.jpg",
+            "link": ""
+          }
+        },
+        "62eeed09-b002-4eff-919d-653eda0ee7b9": {
+          "type": "collection",
+          "settings": {
+            "collection": "vegepod",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4",
+        "aaa22e5b-04c5-49bb-96b9-d72c79f21f1b",
+        "62eeed09-b002-4eff-919d-653eda0ee7b9"
+      ],
+      "settings": {
+        "title": "Discover our Range",
+        "link_title": "View all",
+        "link": "shopify:\/\/collections",
+        "round_images": false,
+        "show_collection_title": true
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "shrubs",
+        "title": "Spotlight on Shrubs",
+        "products_count": 8,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_quick_buy": true,
+        "link_title": "View more",
+        "link_url": ""
+      }
+    }
+  },
+  "order": [
+    "1652310232899c51b0",
+    "16301906615df2e9a4",
+    "163831718488b9148b",
+    "1647771533bb280d6a",
+    "collection-list",
+    "featured-collection"
+  ]
+}

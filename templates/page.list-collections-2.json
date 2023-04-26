@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "1659675309d5225f60": {
+      "type": "slideshow",
+      "blocks": {
+        "16596753097516b927-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13150-Current-Promotions-banner.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16596753097516b927-0"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "main": {
+      "type": "main-collections-list",
+      "blocks": {
+        "a66678d3-3e5d-4c0d-9251-1d001f19c5c4": {
+          "type": "collection",
+          "settings": {
+            "collection": "25-off-all-camellias"
+          }
+        },
+        "2a2513fc-1025-4e7c-be45-12766c8703d8": {
+          "type": "collection",
+          "settings": {
+            "collection": "rose-25-off"
+          }
+        },
+        "21853a51-6ed6-4fd8-b8ae-3cc0dd6fe8f5": {
+          "type": "collection",
+          "settings": {
+            "collection": "deciduous-ornamental-tree"
+          }
+        }
+      },
+      "block_order": [
+        "a66678d3-3e5d-4c0d-9251-1d001f19c5c4",
+        "2a2513fc-1025-4e7c-be45-12766c8703d8",
+        "21853a51-6ed6-4fd8-b8ae-3cc0dd6fe8f5"
+      ],
+      "settings": {
+        "collections_to_show": "selected",
+        "show_collection_title": true,
+        "show_collection_overlay": true,
+        "collection_overlay_opacity": 30
+      }
+    },
+    "16596739429c5c3e17": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "spring-sale",
+        "title": "Buzzing About Spring!",
+        "products_count": 18,
+        "layout": "vertical",
+        "stack_products": true,
+        "show_quick_buy": false,
+        "link_title": "",
+        "link_url": ""
+      }
+    },
+    "1663194310c4b20654": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "health-beauty",
+        "title": "Heath & Beauty - 20% Off",
+        "products_count": 12,
+        "layout": "horizontal",
+        "stack_products": false,
+        "show_quick_buy": false,
+        "link_title": "View all",
+        "link_url": ""
+      }
+    }
+  },
+  "order": [
+    "1659675309d5225f60",
+    "main",
+    "16596739429c5c3e17",
+    "1663194310c4b20654"
+  ]
+}
