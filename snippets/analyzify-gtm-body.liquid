@@ -108,7 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           collectionGproductId.push("shopify_NZ_"+"{{ product.id }}"+"_"+"{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}")
           collectionVariantId.push("{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}")
         {% endfor %}
-        
+
         window.dataLayer.push({
           event: 'ee_productImpression',
           category_name: collectionTitle,
@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var searchProductsPosition = [];
         var searchGproductId = [];
         var searchVariantId = [];
-        
+
         {% for product in search.results %}
           searchProductsBrand.push("{{ product.vendor | remove: "'" | remove: '"' }}");
           searchProductsType.push("{{ product.type | remove: "'" | remove: '"' }}")
@@ -193,7 +193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           variant_id: searchVariantId
         });
 
-        
+
         jQuery351(document).on('click', 'a[href*="/products/"]', function(event) {
           if(searchResultsJson.length < 1 ) return;
           var href= jQuery351(this).attr('href');
@@ -202,7 +202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             return handle.includes(product.handle);
           });
           if (clickedProduct.length == 0 ) return;
-          
+
           window.dataLayer.push({
             event: 'ee_productClick',
             product_name: clickedProduct[0].title,
@@ -227,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var productType = "{{ product.type | remove: "'" | remove: '"' }}";
         var productSku = "{{ product.selected_or_first_available_variant.sku | remove: "'" | remove: '"' }}";
         var productCollection = "{{ product.collections.last.title | remove: "'" | remove: '"' }}";
-        
+
         window.dataLayer.push({
           event: 'ee_productDetail',
           name: productName,
@@ -391,7 +391,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% when 'cart' %}
           analyzifyCartPageHandle()
       {% endcase %}
-      
+
       {% unless template_name == 'product' %}
         // jQuery351(document).on('click', cart_icon, function(event) {
         // checkoutEvent();
