@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               cartItemsQuantity.push(val.quantity);
               cartGProductIds.push("shopify_NZ_"+val.product_id+"_"+val.variant_id);
             });
-            
+
             params = {
               event: event_name,
               page_type: 'checkout',
@@ -62,17 +62,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               totalQuantity: cart.item_count,
               g_product_id: cartGProductIds
             }
-            
+
             if(option_value != ''){
             	params['option_value'] = option_value;
             }
-            
+
             window.dataLayer.push(params);
             console.log(event_name+'==>', window.dataLayer);
           }
         });
     }
-    
+
     if(Shopify.Checkout.step == 'contact_information'){
       checkout_event('ee_checkout_contact_information');
     }else if(Shopify.Checkout.step == 'shipping_method'){
@@ -88,11 +88,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        setTimeout(function(){
          checkout_event('ee_checkout_payment_method_option', $('[name="checkout[payment_gateway]"]:checked').parents('.radio-wrapper').attr('data-gateway-name'));
        }, 1000)
-                        
+
     }else if(Shopify.Checkout.step == 'review'){
       checkout_event('ee_checkout_review');
 	}
-    
+
     $(document).on('change', '[name="checkout[shipping_rate][id]"]', function(){
       if($('[name="checkout[shipping_rate][id]"]:checked').val() != ''){
         shipping_method_option = decodeURIComponent($('[name="checkout[shipping_rate][id]"]:checked').val());
@@ -101,12 +101,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 	  }
     });
-    
+
     $(document).on('change', '[name="checkout[payment_gateway]"]', function(){
 	  if($('[name="checkout[payment_gateway]"]:checked').parents('.radio-wrapper').attr('data-gateway-name')){
-         checkout_event('ee_checkout_payment_method_option', $('[name="checkout[payment_gateway]"]:checked').parents('.radio-wrapper').attr('data-gateway-name'));               
+         checkout_event('ee_checkout_payment_method_option', $('[name="checkout[payment_gateway]"]:checked').parents('.radio-wrapper').attr('data-gateway-name'));
 	  }
     });
-    
+
   });
 </script>

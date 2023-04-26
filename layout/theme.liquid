@@ -2,7 +2,7 @@
 
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="theme-color" content="{{ settings.accent_color }}">
@@ -107,7 +107,7 @@
     {%- endif -%}
 
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
-    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+    {% comment %} <script src="{{ 'custom.js' | asset_url }}" defer></script> {% endcomment %}
 
     {%- if request.page_type != 'cart' -%}
       <script>
@@ -155,7 +155,7 @@
     <ul hidden>
       <li id="a11y-new-window-message">{{ 'general.accessibility.new_window' | t }}</li>
     </ul>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> {% endcomment %}
 
 {% comment %} Dotdigital CartInsight: Start {% endcomment %}{% if content_for_header contains "https:\/\/r3-t.trackedlink.net\/shopify\/wbt.js" and customer.email %} {% assign track_non_subscribed = true %} {% if customer.accepts_marketing or track_non_subscribed %} <script> window.dmPtId = function() { window.dmPt('identify', '{{ customer.email }}'); } </script> {% endif %} {% endif %}{% comment %} Dotdigital CartInsight: End {% endcomment %}
 </body>

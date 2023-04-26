@@ -1,0 +1,100 @@
+{{ 'reset.css' | asset_url | stylesheet_tag }}
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'accordion.js' | asset_url }}" defer></script>
+
+{%- style -%}
+  .accordion  {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+      .accordion  {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+<div class="accordion">
+  <div class="container">
+    <ul class="accordion__list">
+      {%- for block in section.blocks -%}
+        <li class="accordion__item">
+          <div class="accordion__item_head js-acc-trigger">
+            <h3 class="accordion__item_title">{{ block.settings.accordion_title | escape }}</h3>
+            <div class="accordion__item_icon">
+              {%- render 'icon', icon: 'arrow' -%}
+            </div>
+          </div>
+          {%- if block.settings.accordion_content -%}
+            <div class="accordion__item_body">
+              <div class="accordion__item_text">{{- block.settings.accordion_content -}}</div>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accordion",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "padding_bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "accordion-item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Title",
+          "default": "Block title"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_content",
+          "label": "Content",
+          "default": "<p>Block content goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "accordion",
+      "blocks": [
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

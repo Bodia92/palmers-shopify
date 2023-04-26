@@ -365,7 +365,7 @@
         <path d="M8 8h8m-8 4h5" stroke="{{ settings.accent_color }}"></path>
       </g>
     </svg>
-  
+
   {%- when 'bi-customer-support' -%}
     <svg focusable="false" viewBox="0 0 24 24" role="presentation">
       <g stroke-width="{{ stroke_width | default: 2 }}" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -564,5 +564,10 @@
         <circle stroke="{{ settings.heading_color }}" cx="9" cy="13" r="9"></circle>
         <path d="M6 0h6M9 0v1" stroke="{{ settings.accent_color }}"></path>
       </g>
+    </svg>
+  {%- when 'arrow' -%}
+    <svg fill="none" fill-rule="evenodd" focusable="false" class="{{ icon_class }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.66 11.35">
+      <path class="cls-1" d="m0,1.92L1.89.04l9.43,9.43-1.89,1.89L0,1.92Z"/>
+      <path class="cls-1" d="m18.66,1.89l-1.89-1.89L7.34,9.43l1.89,1.89L18.66,1.89Z"/>
     </svg>
 {%- endcase -%}
