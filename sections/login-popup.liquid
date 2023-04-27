@@ -1,0 +1,119 @@
+{{ 'reset.css' | asset_url | stylesheet_tag }}
+{{ 'login-popup.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'login-popup.js' | asset_url }}" defer></script>
+
+
+<aside class="login_popup" data-popup-type="login" data-popup-settings='{{ popup_settings }}' aria-hidden="true" {{ block.shopify_attributes }}>
+  <div class="login_popup__in">
+    <button class="login_popup__close link" data-action="close-popup" aria-label="{{ 'general.accessibility.close' | t }}">
+      {%- render 'icon', icon: 'close' -%}
+    </button>
+    <div class="login_popup__content">
+      {%- if section.settings.image != blank -%}
+        <div class="login_popup__img">
+          <img
+            src="{{ section.settings.image | image_url }}"
+            {% if section.settings.image.alt != blank %}
+              alt="{{ section.settings.image.alt | escape }}"
+            {% else %}
+              alt="login popup picture"
+            {% endif %}
+            height="auto"
+            width="auto"
+            loading="lazy"
+            class="login_popup__img_in"
+          >
+        </div>
+      {%- endif -%}
+      <ul class="login_popup__list">
+        {%- for block in section.blocks -%}
+          <li class="login_popup__item">
+            {%- if block.settings.item_title != blank -%}
+              <h3 class="login_popup__item_title"><span class="login_popup__item_num">{{ forloop.index }}</span>{{- block.settings.item_title -}}</h3>
+            {%- endif -%}
+            <div class="login_popup__item_wrap">
+              {%- if block.settings.item_text != blank -%}
+                <div class="login_popup__item_text">{{- block.settings.item_text -}}</div>
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                <div class="login_popup__item_img">
+                  <img
+                    src="{{ block.settings.image | image_url }}"
+                    {% if block.settings.image.alt != blank %}
+                      alt="{{ block.settings.image.alt | escape }}"
+                    {% else %}
+                      alt="login popup card"
+                    {% endif %}
+                    height="auto"
+                    width="auto"
+                  >
+                </div>
+              {%- endif -%}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class='login_popup__btn'>
+        <a href='{{ routes.account_register_url }}' class='button button--primary button--full'>Register now</a>
+      </div>
+      <div class='login_popup__action'>
+        <p>Already have an account? <a href='{{ routes.account_login_url }}' class="link link--accented">Login now</a></p>
+      </div>
+    </div>
+  </div>
+</aside>
+
+
+{% schema %}
+{
+  "name": "Login popup",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image logo"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "popup-item",
+      "name": "popup-item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "item_title",
+          "label": "Title",
+          "default": "<p>Block title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "item_text",
+          "label": "Content",
+          "default": "<p>Block content goes here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "popup-item",
+      "blocks": [
+        {
+          "type": "popup-item"
+        },
+        {
+          "type": "popup-item"
+        },
+        {
+          "type": "popup-item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

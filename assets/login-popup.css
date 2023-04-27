@@ -1,0 +1,248 @@
+.login_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  align-content: stretch;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 20px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+
+  background-color: hsla(0, 0%, 0%, 0.6);
+}
+
+.login_popup.login_popup--active_state {
+  z-index: 1000;
+
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.login_popup__in {
+  position: relative;
+  width: 100%;
+  max-width: 688px;
+  margin: 28px auto auto;
+  height: auto;
+  padding: 24px 24px 96px;
+
+  border-radius: 3px;
+  background-color: #68a3db;
+}
+
+.login_popup__in:before {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  content: '';
+  width: 100%;
+  height: 281px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_bottom.svg?v=1682597075);
+}
+
+.login_popup__in:after {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 137px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_top.svg?v=1682601865);
+}
+
+.login_popup__close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 10;
+  color: var(--heading-color);
+}
+
+.login_popup__close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.login_popup__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login_popup__img {
+  width: 238px;
+  height: 174px;
+
+  margin: 0 auto 20px;
+}
+
+.login_popup__img_in {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.login_popup__list {
+}
+
+.login_popup__list:not(.login_popup__list:last-child) {
+  margin-bottom: 33px;
+}
+
+.login_popup__item {
+  position: relative;
+}
+
+.login_popup__item:not(.login_popup__item:last-child) {
+  margin-bottom: 34px;
+}
+
+.login_popup__item_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.13;
+  font-weight: 400;
+  text-align: center;
+}
+
+.login_popup__item_title strong {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.login_popup__item_title:not(.login_popup__item_title:last-child) {
+  margin-bottom: 20px;
+}
+
+.login_popup__item_num {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 29px;
+
+  color: #235833;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.login_popup__item_num::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  content: '';
+
+  width: 42px;
+  height: 42px;
+  background-color: #f7ce3b;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.login_popup__item_wrap {
+  max-width: 544px;
+  margin: 0 auto;
+  padding: 18px 145px 18px 50px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.login_popup__item_text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.37;
+}
+
+.login_popup__item_img {
+  position: absolute;
+  bottom: -22px;
+  right: 28px;
+
+  width: 160px;
+  height: 122px;
+}
+
+.login_popup__item_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.login_popup__btn {
+  min-width: 260px;
+  margin: 0 auto;
+}
+
+.login_popup__btn:not(.login_popup__btn:last-child) {
+  margin-bottom: 18px;
+}
+
+.login_popup__action {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.46;
+}
+
+.login_popup__action a {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 641px) {
+  .login-popup__close {
+    position: absolute;
+    right: 30px;
+    top: 24px;
+  }
+
+  .login-popup__close svg {
+    width: 20px;
+    height: 20px;
+  }
+}

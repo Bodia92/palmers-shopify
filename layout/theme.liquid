@@ -45,6 +45,9 @@
 
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'overrides.css' | asset_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     {% render 'microdata-schema' %}
 
@@ -141,6 +144,7 @@
     {%- unless request.page_type == 'cart' -%}
       {%- comment -%}As required by Shopify rules, popup must be removed on cart page to remove distraction{%- endcomment -%}
       {% section 'popups' %}
+      {% section 'login-popup' %}
     {%- endunless -%}
 
     {% section 'header' %}

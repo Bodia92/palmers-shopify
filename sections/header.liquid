@@ -74,13 +74,13 @@
         {%- else -%}
           <div class="header__logo">{{ header_logo }}</div>
         {%- endif -%}
-        
+
         {%- comment -%}
 		--------------------------------------------------------------------------------------
         STORE SELECTOR
         --------------------------------------------------------------------------------------
-        
-        
+
+
         <nav class="header__desktop-nav hidden-pocket">
             <button class="header__desktop-nav-toggle" style="color: var(--secondary-background);background: var(--header-accent-color);" data-action="open-modal" aria-controls="StoreAvailabilityModal-picker" aria-label="Select store">
               <span>{%- render 'icon', icon: 'store' -%} <span class="header__desktop-nav-text" id="storeNameHeader">Select store</span></span>
@@ -195,6 +195,8 @@
             </div>
           </form>
         </div>
+
+        <button type="button" class="login_btn loginPopupTrigger" aria-label="Select popup">Link Popup</button>
 
         {%- comment -%}
         --------------------------------------------------------------------------------------

@@ -19,13 +19,21 @@
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+html.html--popup_open {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
+}
+
+body.body--popup_open{
+  overflow: hidden;
 }
 
 [hidden] {
@@ -2429,7 +2437,13 @@ img.lazyload[data-sizes=auto] {
 }
 .button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+
   padding: 0 30px;
   line-height: 48px;
   border-radius: 2px;
