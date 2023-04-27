@@ -1,1 +1,47 @@
-{"sections":{"main":{"type":"main-customers-addresses","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-customers-addresses",
+      "settings": {}
+    },
+    "accordion_section": {
+      "type": "accordion",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "I’ve recently made a purchase instore, how can I keep those points?",
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Where can I find the code on my reciept?",
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "I already have a Palmers rewards card, how do I link my online account?",
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "accordion_section"
+  ]
+}
