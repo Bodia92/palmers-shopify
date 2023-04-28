@@ -1,5 +1,48 @@
 {
   "sections": {
+    "b31283af-335c-4dd7-b718-5a42b8023a8f": {
+      "type": "register-step",
+      "blocks": {
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-0": {
+          "type": "register-item",
+          "settings": {
+            "item_title": "<p>I’m completely new to <br\/><strong>Palmers Rewards<\/strong><\/p>",
+            "item_text": "<p>Sign up to join Palmers Rewards now so you can start growing your rewards<\/p>",
+            "image": "shopify:\/\/shop_images\/Card-Graphic.png",
+            "register_link": "Sign up now"
+          }
+        },
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-1": {
+          "type": "register-item",
+          "settings": {
+            "item_title": "<p>I’ve made an <strong>in-store purchase<\/strong> but don’t have an account<\/p>",
+            "item_text": "<p>Sign up now and enter the <br\/>12 digit code on your receipt to earn points towards <br\/>your first reward!<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_3.png",
+            "register_link": "Create an account"
+          }
+        },
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-2": {
+          "type": "register-item",
+          "settings": {
+            "item_title": "<p>I have a <strong>Palmers Rewards<\/strong> card but haven’t activated it online<\/p>",
+            "item_text": "<p>Register your card online using the X digit number under the barcode on the back of your card.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_2.png",
+            "register_link": "Register your card"
+          }
+        }
+      },
+      "block_order": [
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-0",
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-1",
+        "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-2"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "register_title": "Register for Palmers Rewards",
+        "register_descr": "<p>Select the option below that suits you best:<\/p>"
+      }
+    },
     "accordion_section": {
       "type": "accordion",
       "blocks": {
@@ -37,6 +80,7 @@
     }
   },
   "order": [
+    "b31283af-335c-4dd7-b718-5a42b8023a8f",
     "accordion_section"
   ]
 }
