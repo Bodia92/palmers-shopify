@@ -440,8 +440,39 @@
       },
       "login-popup": {
         "type": "login-popup",
+        "blocks": {
+          "29ec3535-50b2-4c68-9b8d-c615d6c5e5b5": {
+            "type": "popup-item",
+            "settings": {
+              "item_title": "<p>new to <strong>Palmers Rewards<\/strong>?<\/p>",
+              "item_text": "<p>Sign up to join Palmers Rewards now so you can start growing your rewards!<\/p>",
+              "image": "shopify:\/\/shop_images\/Card-Graphic.png"
+            }
+          },
+          "f74f71d0-ff75-4dd4-8269-50803ce87b9e": {
+            "type": "popup-item",
+            "settings": {
+              "item_title": "<p>Recently made a <strong>purchase <\/strong>in-store?<\/p>",
+              "item_text": "<p>Enter the 12 digit code on your receipt to earn points towards your first reward!<\/p>",
+              "image": "shopify:\/\/shop_images\/Group_3.png"
+            }
+          },
+          "059e3c5f-eed7-47aa-a5d2-c495afa8cc7e": {
+            "type": "popup-item",
+            "settings": {
+              "item_title": "<p>Already have a <strong>Palmers rewards<\/strong> card?<\/p>",
+              "item_text": "<p>Register your card online using the X digit number  on the back of your card.<\/p>",
+              "image": "shopify:\/\/shop_images\/Group_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "29ec3535-50b2-4c68-9b8d-c615d6c5e5b5",
+          "f74f71d0-ff75-4dd4-8269-50803ce87b9e",
+          "059e3c5f-eed7-47aa-a5d2-c495afa8cc7e"
+        ],
         "settings": {
-          "link": "shopify:\/\/pages\/register-step"
+          "image": "shopify:\/\/shop_images\/sprite-1_1.png"
         }
       }
     },
