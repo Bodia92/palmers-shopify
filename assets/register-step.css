@@ -1,5 +1,5 @@
 .register_step {
-  background-color: #f7f4f2;
+  /* background-color: #f7f4f2; */
 }
 
 .register_step__title {
@@ -199,4 +199,8 @@
   position: relative;
   z-index: 2;
   margin-top: auto;
+}
+
+.register_step__item_btnзщз {
+  padding-bottom: 2px;
 }
