@@ -54,7 +54,7 @@
         {% endfor %}
       </ul>
       <div class='login_popup__btn'>
-        <a href='{{ routes.account_register_url }}' class='button button--primary button--full'>Register now</a>
+        <a href='{{ section.settings.link }}' class='button button--primary button--full'>Register now</a>
       </div>
       <div class='login_popup__action'>
         <p>Already have an account? <a href='{{ routes.account_login_url }}' class="link link--accented">Login now</a></p>
@@ -72,6 +72,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image logo"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "link label"
     }
   ],
   "blocks": [
