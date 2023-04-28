@@ -123,7 +123,6 @@
         ],
         "settings": {
           "enable_sticky_header": true,
-          "logo": "shopify:\/\/shop_images\/logo_160x_2x_ed0f5b03-1052-4ca5-a365-df5fcd0ed21e.png",
           "logo_max_width": 160,
           "mobile_logo_max_width": 125,
           "show_locale_selector": false,
@@ -438,6 +437,12 @@
         "type": "store-selector-bar",
         "settings": {
         }
+      },
+      "login-popup": {
+        "type": "login-popup",
+        "settings": {
+          "link": "shopify:\/\/pages\/register-step"
+        }
       }
     },
     "content_for_index": [
@@ -446,15 +451,7 @@
       "1542984811767",
       "collection-list",
       "1550833441117"
-    ],
-    "blocks": {
-      "1632780363377ec5f3": {
-        "type": "shopify:\/\/apps\/store-pickup-delivery\/blocks\/app-embed\/5599aff0-8af1-473a-a372-ecd72a32b4d5",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Metal": {
