@@ -1,0 +1,156 @@
+{{ "reset.css" | asset_url | stylesheet_tag }}
+{{ "register-step.css" | asset_url | stylesheet_tag }}
+
+
+{%- style -%}
+  .register_step  {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 767px) {
+      .register_step  {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+
+
+<div class="register_step">
+  <div class="container">
+    {%- if section.settings.register_title != blank -%}
+      <h1 class="register_step__title heading h1">{{ section.settings.register_title | escape }}</h1>
+    {%- endif -%}
+    {%- if section.settings.register_descr != blank -%}
+      <div class="register_step__descr">{{- section.settings.register_descr -}}</div>
+    {%- endif -%}
+    <div class="register_step__wrap">
+      <ul class="register_step__list">
+        {%- for block in section.blocks -%}
+          <li class="register_step__item">
+            <div class="register_step__item_content">
+              <div class="register_step__item_num"><span>{{ forloop.index }}</span></div>
+              {%- if block.settings.item_title != blank -%}
+                <h2 class="register_step__item_title">{{- block.settings.item_title -}}</h2>
+              {%- endif -%}
+              <div class="register_step__item_in">
+                {%- if block.settings.item_text != blank -%}
+                  <div class="register_step__item_text">{{- block.settings.item_text -}}</div>
+                {%- endif -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="register_step__item_img">
+                    <img
+                      src="{{ block.settings.image | image_url }}"
+                      {% if block.settings.image.alt != blank %}
+                        alt="{{ block.settings.image.alt | escape }}"
+                      {% else %}
+                        alt="register item image"
+                      {% endif %}
+                      height="100%"
+                      width="100%"
+                    >
+                  </div>
+                {%- endif -%}
+              </div>
+              {%- if block.settings.register_link != blank -%}
+                <div class="register_step__item_link">
+                  <a href="#" class="button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                </div>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Register Step",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "padding_bottom",
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "register_title",
+      "label": "Title",
+      "default": "Register title"
+    },
+    {
+      "type": "richtext",
+      "id": "register_descr",
+      "label": "Description",
+      "default": "<p>Register description</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "register-item",
+      "name": "register-item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "item_title",
+          "label": "Title",
+          "default": "<p>Block title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "item_text",
+          "label": "Content",
+          "default": "<p>Block content goes here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image text"
+        },
+        {
+          "type": "text",
+          "id": "register_link",
+          "label": "Link text",
+          "default": "Register link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Register Step",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "register-item"
+        },
+        {
+          "type": "register-item"
+        },
+        {
+          "type": "register-item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

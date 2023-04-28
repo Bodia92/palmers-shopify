@@ -6561,6 +6561,7 @@ select option {
     margin-bottom: 22px;
   }
 }
+
 /**
  * --------------------------------------------------------------------
  * MEDIA API
@@ -13805,4 +13806,58 @@ shopify-payment-terms {
 
 .stockist-powered-by-link {
   display: none !important;
+}
+
+
+.login_btn.login_btn--desktop_mod {
+  margin-left: auto;
+  margin-right: 7px;
+}
+
+.login_btn {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 180px;
+  min-height: 48px;
+  padding: 10px 24px 10px 14px;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #f7f4f2;
+  cursor: pointer;
+}
+
+.login_btn__text {
+  width: 100%;
+  color: #235833;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.login_btn__text strong {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.018rem;
+  line-height: 1;
+}
+
+.login_btn__text p {
+  margin: 0;
+}
+
+@media (max-width: 999px) {
+  .login_btn.login_btn--desktop_mod {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .header__search-bar-wrapper {
+    flex: 1 0 auto;
+    max-width: 60%;
+    margin-right: 10px;
+  }
 }

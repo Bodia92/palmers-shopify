@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     if (!$close) return null
-
+    ц
     $close.forEach((item) => {
       item.addEventListener('click', () => {
         popupClose(item.closest(popup))
