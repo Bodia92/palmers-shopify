@@ -472,7 +472,8 @@
           "059e3c5f-eed7-47aa-a5d2-c495afa8cc7e"
         ],
         "settings": {
-          "image": "shopify:\/\/shop_images\/sprite-1_1.png"
+          "image": "shopify:\/\/shop_images\/sprite-1_1.png",
+          "link": "shopify:\/\/pages\/register-step"
         }
       }
     },
