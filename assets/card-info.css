@@ -1,6 +1,5 @@
 .card_info {
   position: relative;
-  padding: 20px 24px 28px;
 
   max-width: 620px;
   margin: 0 auto;
@@ -123,16 +122,14 @@
 
 .card_info__item {
   position: relative;
-  padding: 22px 28px 30px;
   border-radius: 5px;
 }
 
-.card_info__item::before,
-.card_info__item::after {
+.card_info__item::before {
   z-index: 1;
   position: absolute;
   left: 0;
-  bottom: 20px;
+  bottom: 25px;
   content: '';
   width: 100%;
   pointer-events: none;
@@ -141,12 +138,12 @@
   background-position: 50% 50%;
 }
 
-.card_info__item:nth-child(odd)::before {
+.card_info__item:nth-child(odd).card_info__item::before {
   height: 230px;
   background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_bottom.svg?v=1682597075);
 }
 
-.card_info__item:nth-child(even)::after {
+.card_info__item:nth-child(even).card_info__item::before {
   height: 110px;
   background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_top.svg?v=1682601865);
 }
@@ -173,9 +170,6 @@
 
   display: flex;
   align-items: center;
-  /* flex-wrap: wrap; */
-
-  gap: 15px;
 }
 
 .card_info__item_content {
@@ -185,7 +179,6 @@
 .card_info__item_title {
   color: #ffffff;
   font-family: 'PT Sans', sans-serif;
-  font-size: 26px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -217,7 +210,7 @@
 
 .card_info__item__img {
   flex-shrink: 0;
-  width: 150px;
+  width: 145px;
   height: auto;
 }
 
@@ -228,7 +221,22 @@
   object-fit: contain;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
+  .card_info {
+    padding: 20px 24px 28px;
+  }
+
+  .card_info__item {
+    padding: 22px 20px 30px 28px;
+  }
+
+  .card_info__item_box {
+    gap: 10px;
+  }
+
+  .card_info__item_title {
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -243,5 +251,34 @@
 
   .card_info__advantages {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card_info {
+    padding: 20px;
+  }
+
+  .card_info__item {
+    padding: 20px;
+  }
+
+  .card_info__item_box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card_info__item_content {
+    order: 2;
+
+    text-align: center;
+  }
+
+  .card_info__item_title {
+    font-size: 20px;
+  }
+
+  .card_info__item__img {
+    order: 1;
   }
 }
