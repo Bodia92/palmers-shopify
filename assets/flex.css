@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+}
+
+.col {
+  width: 50%;
+  flex-shrink: 0;
+
+  padding-bottom: 63px;
+}
+
+.col:not(.col:last-child) {
+  border-right: 1px solid #8cc540;
+}

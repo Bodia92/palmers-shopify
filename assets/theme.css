@@ -4783,8 +4783,8 @@ img.lazyload[data-sizes=auto] {
  */
 
 .form--main {
-  max-width: 350px;
-  margin: 60px auto;
+  max-width: 620px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -4806,12 +4806,12 @@ img.lazyload[data-sizes=auto] {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 641px) {
+/* @media screen and (min-width: 641px) {
   .form--main {
     margin-top: 110px;
     margin-bottom: 150px;
   }
-}
+} */
 
 /**
  * --------------------------------------------------------------------

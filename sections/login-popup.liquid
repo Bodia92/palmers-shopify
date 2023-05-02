@@ -1,6 +1,6 @@
 {{ "reset.css" | asset_url | stylesheet_tag }}
 {{ "login-popup.css" | asset_url | stylesheet_tag }}
-<script src="{{ "login-popup.js" | asset_url }}" defer></script>
+<script src='{{ "login-popup.js" | asset_url }}' defer></script>
 
 
 <aside class="login_popup" data-popup-type="login" data-popup-settings="{{ popup_settings }}" aria-hidden="true" {{ block.shopify_attributes }}>
