@@ -61,7 +61,7 @@
   width: 100%;
   pointer-events: none;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: 50% 50%;
   background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_bottom.svg?v=1682597075);
 }
@@ -175,7 +175,13 @@
   padding-bottom: 2px;
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1440px) {
+  .register_step__item {
+    width: 33.333%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .register_step__item_title {
     font-size: 28px;
   }
@@ -195,7 +201,6 @@
   }
 
   .register_step__item {
-    width: 33.333%;
     flex-shrink: 0;
 
     padding: 0 25px 25px 0;
@@ -217,7 +222,13 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .register_step__item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   .register_step__item_title {
     font-size: 20px;
   }
@@ -237,7 +248,6 @@
 
   .register_step__item_in {
     padding: 18px 20px;
-    width: 100%;
   }
 
   .register_step__item_text:not(.register_step__item_text:last-child) {

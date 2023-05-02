@@ -1,0 +1,66 @@
+<div class="card_info">
+  <div class="card_info__head">
+    {%- if section.settings.image != blank -%}
+      <div class="card_info__img">
+        <img
+          src="{{ section.settings.image | image_url }}"
+          {% if section.settings.image.alt != blank %}
+            alt="{{ section.settings.image.alt | escape }}"
+          {% else %}
+            alt="card info logo"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      </div>
+    {%- endif -%}
+    <div class="card_info__advantages">
+      {%- if section.settings.advantage_title != blank -%}
+        <h2 h2 class="card_info__advantages_title">{{- section.settings.advantage_title -}}</h2>
+      {%- endif -%}
+      {%- if section.settings.advantage_list != blank -%}
+        <div class="card_info__advantages_list">{{- section.settings.advantage_list -}}</div>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="card_info__wrap">
+    <ul class="card_info__list">
+      {%- for block in section.blocks -%}
+        <li class="card_info__item card_info__item--bg_{{ block.settings.bg_color }}">
+          <div class="card_info__item_box">
+            <div class="card_info__item_content">
+              {%- if block.settings.item_title != blank -%}
+                <h3 class="card_info__item_title">{{- block.settings.item_title -}}</h3>
+              {%- endif -%}
+              {%- if block.settings.item_text != blank -%}
+                <div class="card_info__item_text">{{- block.settings.item_text -}}</div>
+              {%- endif -%}
+
+              {%- if block.settings.item_link != blank -%}
+                <div class="card_info__item_link">
+                  <a href="#" class="card_info__item_btn button button--primary">{{ block.settings.item_link | escape }}</a>
+                </div>
+              {%- endif -%}
+            </div>
+            {%- if block.settings.item_image != blank -%}
+              <div class="card_info__item__img">
+                <img
+                  src="{{ block.settings.item_image | image_url }}"
+                  {% if block.settings.image.alt != blank %}
+                    alt="{{ block.settings.item_image.alt | escape }}"
+                  {% else %}
+                    alt="card info image"
+                  {% endif %}
+                  height="auto"
+                  width="auto"
+                  loading="lazy"
+                >
+              </div>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
