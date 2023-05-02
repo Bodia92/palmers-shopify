@@ -9,6 +9,14 @@
   padding-bottom: 63px;
 }
 
+.col:nth-child(odd) {
+  padding-right: 40px;
+}
+
+.col:nth-child(even) {
+  padding-left: 40px;
+}
+
 .col:not(.col:last-child) {
   border-right: 1px solid #8cc540;
 }
