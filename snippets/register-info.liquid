@@ -1,0 +1,41 @@
+<div class="register_info">
+  {%- if section.settings.register_title != blank -%}
+    <h3 class="register_info__title">{{ section.settings.register_title | escape }}</h3>
+  {%- endif -%}
+  {%- if section.settings.register_text != blank -%}
+    <div class="register_info__text">{{ section.settings.register_text | escape }}</div>
+  {%- endif -%}
+  <ul class="register_info__list">
+    {%- for block in section.blocks -%}
+      <li class="register_info__item">
+        <div class="register_info__item_num"><span>{{ forloop.index }}</span></div>
+        <div class="register_info__item_content">
+          {%- if block.settings.item_title != blank -%}
+            <h3 class="register_info__item_title">{{- block.settings.item_title -}}</h3>
+          {%- endif -%}
+          {%- if block.settings.item_text != blank -%}
+            <div class="register_info__item_text">{{- block.settings.item_text -}}</div>
+          {%- endif -%}
+        </div>
+        {%- if block.settings.item_image != blank -%}
+          <div class="register_info__item_img">
+            <img
+              src="{{ block.settings.item_image | image_url }}"
+              {% if block.settings.image.alt != blank %}
+                alt="{{ block.settings.item_image.alt | escape }}"
+              {% else %}
+                alt="register info image"
+              {% endif %}
+              height="auto"
+              width="auto"
+              loading="lazy"
+            >
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  <div class="register_info__link">
+    <a href="{{ section.settings.link }}" class="button button--primary">Register now</a>
+  </div>
+</div>
