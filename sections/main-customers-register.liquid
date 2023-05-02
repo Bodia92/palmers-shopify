@@ -1,70 +1,163 @@
-<section data-section-id="{{ section.id }}" data-section-type="register">
+{{ "flex.css" | asset_url | stylesheet_tag }}
+{{ "card-info.css" | asset_url | stylesheet_tag }}
+
+<section data-section-id="{{ section.id }}" data-section-type="register" class="section">
   <div class="container">
-    {%- form 'create_customer', name: 'create', class: 'form form--main', id: 'create_customer' -%}
-      <header class="form__header">
-        <h1 class="form__title heading h1">{{ 'customer.register.create_account' | t }}</h1>
-        <p class="form__legend">{{ 'customer.register.description' | t }}</p>
-      </header>
+    <div class="flex" >
+      <div class="col">
+        {%- form 'create_customer', name: 'create', class: 'form form--main', id: 'create_customer' -%}
+          <header class="form__header">
+            <h1 class="form__title heading h1">{{ 'customer.register.create_account' | t }}</h1>
+            <p class="form__legend">{{ 'customer.register.description' | t }}</p>
+          </header>
 
-      {%- if form.errors -%}
-        <div class="alert alert--error" id="register-form-error">
-          <ul class="alert__error-list" role="list">
-            {%- for field in form.errors -%}
-              {%- if field == 'form' -%}
-                <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
-              {%- else -%}
-                <li class="alert__error-item"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
-        </div>
-      {%- endif -%}
+          {%- if form.errors -%}
+            <div class="alert alert--error" id="register-form-error">
+              <ul class="alert__error-list" role="list">
+                {%- for field in form.errors -%}
+                  {%- if field == 'form' -%}
+                    <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
+                  {%- else -%}
+                    <li class="alert__error-item"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
 
-      {%- if request.locale.iso_code == 'ja' -%}
-        <div class="form__input-wrapper form__input-wrapper--labelled">
-          <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required">
-          <label for="customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
-        </div>
+          {%- if request.locale.iso_code == 'ja' -%}
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required">
+              <label for="customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
+            </div>
 
-        <div class="form__input-wrapper form__input-wrapper--labelled">
-          <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required">
-          <label for="customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
-        </div>
-      {%- else -%}
-        <div class="form__input-wrapper form__input-wrapper--labelled">
-          <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required">
-          <label for="customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
-        </div>
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required">
+              <label for="customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
+            </div>
+          {%- else -%}
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required">
+              <label for="customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
+            </div>
 
-        <div class="form__input-wrapper form__input-wrapper--labelled">
-          <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required">
-          <label for="customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
-        </div>
-      {%- endif -%}
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required">
+              <label for="customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
+            </div>
+          {%- endif -%}
 
-      <div class="form__input-wrapper form__input-wrapper--labelled">
-        <input type="email" id="customer[email]" class="form__field form__field--text" name="customer[email]" required="required" {% if form.errors contains 'email' %}aria-invalid="true" aria-describedby="register-form-error"{% endif %}>
-        <label for="customer[email]" class="form__floating-label">{{ 'customer.register.email' | t }}</label>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="email" id="customer[email]" class="form__field form__field--text" name="customer[email]" required="required" {% if form.errors contains 'email' %}aria-invalid="true" aria-describedby="register-form-error"{% endif %}>
+            <label for="customer[email]" class="form__floating-label">{{ 'customer.register.email' | t }}</label>
+          </div>
+
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="password" id="customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="new-password" {% if form.errors contains 'password' %}aria-invalid="true" aria-describedby="register-form-error"{% endif %}>
+            <label for="customer[password]" class="form__floating-label">{{ 'customer.register.password' | t }}</label>
+          </div>
+
+          <button type="submit" class="form__submit button button--primary button--full">{{ 'customer.register.submit' | t }}</button>
+
+          <small class="form__spam-disclaimer">{{- 'shopify.online_store.spam_detection.disclaimer_html' | t -}}</small>
+
+          <div class="form__secondary-action">
+            <p>{{ 'customer.register.already_have_account' | t }} <a href="{{ routes.account_login_url }}" class="link link--accented">{{ 'customer.register.login' | t }}</a></p>
+          </div>
+        {%- endform -%}
       </div>
-
-      <div class="form__input-wrapper form__input-wrapper--labelled">
-        <input type="password" id="customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="new-password" {% if form.errors contains 'password' %}aria-invalid="true" aria-describedby="register-form-error"{% endif %}>
-        <label for="customer[password]" class="form__floating-label">{{ 'customer.register.password' | t }}</label>
+      <div class="col">
+        {% render "card-info" %}
       </div>
-
-      <button type="submit" class="form__submit button button--primary button--full">{{ 'customer.register.submit' | t }}</button>
-
-      <small class="form__spam-disclaimer">{{- 'shopify.online_store.spam_detection.disclaimer_html' | t -}}</small>
-
-      <div class="form__secondary-action">
-        <p>{{ 'customer.register.already_have_account' | t }} <a href="{{ routes.account_login_url }}" class="link link--accented">{{ 'customer.register.login' | t }}</a></p>
-      </div>
-    {%- endform -%}
+    </div>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Register"
+  "name": "Register",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Card logo"
+    },
+    {
+      "type": "richtext",
+      "id": "advantage_title",
+      "label": "Advantages title",
+      "default": "<p>Advantages title</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "advantage_list",
+      "label": "Advantages list",
+      "default": "<p>Advantages list</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card-item",
+      "name": "card-item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "item_image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "item_title",
+          "label": "Title",
+          "default": "<p>Сard title</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "item_text",
+          "label": "Content",
+          "default": "<p>Сard content goes here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "item_link",
+          "label": "Link",
+          "default": "Card link"
+        },
+        {
+          "type": "select",
+          "id": "bg_color",
+          "label": "Item background color",
+          "options": [
+            {
+              "value": "green_light",
+              "label": "light green"
+            },
+            {
+              "value": "green_dark",
+              "label": "dark green"
+            },
+            {
+              "value": "orange",
+              "label": "orange"
+            }
+          ],
+          "default": "green_light"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Register",
+      "blocks": [
+        {
+          "type": "card-item"
+        },
+        {
+          "type": "card-item"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

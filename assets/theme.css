@@ -2440,12 +2440,10 @@ img.lazyload[data-sizes=auto] {
   display: inline-flex;
 	justify-content: center;
 	align-items: center;
-
-	text-align: center;
-	white-space: nowrap;
+  min-height: 48px;
 
   padding: 0 30px 2px;
-  line-height: 48px;
+  line-height: 1.1;
   border-radius: 4px;
   text-align: center;
   font-weight: var(--text-font-bolder-weight);
