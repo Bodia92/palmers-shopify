@@ -6,15 +6,27 @@
         "60cef499-442f-468d-8723-83943927c3e7": {
           "type": "card-item",
           "settings": {
+            "item_image": "shopify:\/\/shop_images\/Group_3.png",
             "item_title": "<p>Have you made a <strong>palmers purchase in-store<\/strong> recently?<\/p>",
             "item_text": "<p>Sign up now using the 12 digit code on your receipt to earn points towards your first reward!<\/p>",
             "item_link": "Create an account using a receipt code",
             "bg_color": "green_light"
           }
+        },
+        "4a3a4c4e-4869-4835-9b4f-0166525caed7": {
+          "type": "card-item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/Group_2.png",
+            "item_title": "<p>Already have a <strong>Palmers Rewards <\/strong>card but haven’t activated it online?<\/p>",
+            "item_text": "<p>Register your card online now using the X digit number on the back of your card<\/p>",
+            "item_link": "Register your card now",
+            "bg_color": "green_dark"
+          }
         }
       },
       "block_order": [
-        "60cef499-442f-468d-8723-83943927c3e7"
+        "60cef499-442f-468d-8723-83943927c3e7",
+        "4a3a4c4e-4869-4835-9b4f-0166525caed7"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/sprite-1_1.png",
