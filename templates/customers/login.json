@@ -2,7 +2,25 @@
   "sections": {
     "main": {
       "type": "main-customers-login",
-      "settings": {}
+      "blocks": {
+        "60cef499-442f-468d-8723-83943927c3e7": {
+          "type": "card-item",
+          "settings": {
+            "item_title": "<p>Have you made a <strong>palmers purchase in-store<\/strong> recently?<\/p>",
+            "item_text": "<p>Sign up now using the 12 digit code on your receipt to earn points towards your first reward!<\/p>",
+            "item_link": "Create an account using a receipt code",
+            "bg_color": "green_light"
+          }
+        }
+      },
+      "block_order": [
+        "60cef499-442f-468d-8723-83943927c3e7"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sprite-1_1.png",
+        "advantage_title": "<p>Why join<strong> palmers Rewards<\/strong>?<\/p>",
+        "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Every $1 spend = 1 point<\/li><li>Every 100 points = $10 voucher<\/li><li>Free gift on your birthday<\/li><\/ul>"
+      }
     },
     "accordion_section": {
       "type": "accordion",
@@ -11,21 +29,21 @@
           "type": "accordion",
           "settings": {
             "accordion_title": "I’ve recently made a purchase instore, how can I keep those points?",
-            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!<\/p>"
           }
         },
         "accordion_2": {
           "type": "accordion",
           "settings": {
             "accordion_title": "Where can I find the code on my reciept?",
-            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!<\/p>"
           }
         },
         "accordion_3": {
           "type": "accordion",
           "settings": {
             "accordion_title": "I already have a Palmers rewards card, how do I link my online account?",
-            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!</p>"
+            "accordion_content": "<p>Register your account using the code found at the bottom of your reciept to start earning points towards your rewards!<\/p>"
           }
         }
       },
