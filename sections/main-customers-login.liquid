@@ -1,5 +1,5 @@
 {{ "flex.css" | asset_url | stylesheet_tag }}
-{{ "card-info.css" | asset_url | stylesheet_tag }}
+{{ "register-info.css" | asset_url | stylesheet_tag }}
 
 <section data-section-id="{{ section.id }}" data-section-type="login" class="section">
   {%- assign is_recover_active = false -%}
@@ -96,7 +96,7 @@
         {%- endform -%}
       </div>
       <div class="col">
-        {% render "card-info" %}
+        {% render "register-info" %}
       </div>
     </div>
   </div>
@@ -114,21 +114,21 @@
   "name": "Login",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Card logo"
+      "type": "text",
+      "id": "register_title",
+      "label": "Register title",
+      "default": "Register title"
     },
     {
-      "type": "richtext",
-      "id": "advantage_title",
-      "label": "Advantages title",
-      "default": "<p>Advantages title</p>"
+      "type": "text",
+      "id": "register_text",
+      "label": "Register text",
+      "default": "Register text"
     },
     {
-      "type": "richtext",
-      "id": "advantage_list",
-      "label": "Advantages list",
-      "default": "<p>Advantages list</p>"
+      "type": "url",
+      "id": "link",
+      "label": "Register now link"
     }
   ],
   "blocks": [
@@ -152,32 +152,6 @@
           "id": "item_text",
           "label": "Content",
           "default": "<p>Сard content goes here.</p>"
-        },
-        {
-          "type": "text",
-          "id": "item_link",
-          "label": "Link",
-          "default": "Card link"
-        },
-        {
-          "type": "select",
-          "id": "bg_color",
-          "label": "Item background color",
-          "options": [
-            {
-              "value": "green_light",
-              "label": "light green"
-            },
-            {
-              "value": "green_dark",
-              "label": "dark green"
-            },
-            {
-              "value": "orange",
-              "label": "orange"
-            }
-          ],
-          "default": "green_light"
         }
       ]
     }
