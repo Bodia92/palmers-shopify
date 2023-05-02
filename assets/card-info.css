@@ -125,6 +125,15 @@
   padding: 22px 28px 30px;
   border-radius: 5px;
 }
+.card_info__item.card_info__item--bg_green_light {
+  background-color: #86c03a;
+}
+.card_info__item.card_info__item--bg_green_dark {
+  background-color: #235833;
+}
+.card_info__item.card_info__item--bg_orange {
+  background-color: #f6b914;
+}
 
 .card_info__item_box {
   display: flex;
