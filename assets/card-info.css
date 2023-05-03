@@ -202,6 +202,10 @@
   text-transform: uppercase;
 }
 
+.card_info__item--bg_orange .card_info__item_title {
+  color: #235833;
+}
+
 .card_info__item_title:not(.card_info__item_title:last-child) {
   margin-bottom: 8px;
 }
@@ -215,6 +219,9 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 1.33;
+}
+.card_info__item--bg_orange .card_info__item_text {
+  color: #235833;
 }
 
 .card_info__item_text:not(.card_info__item_text:last-child) {
