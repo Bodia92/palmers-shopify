@@ -57,15 +57,15 @@
                 {% case block.settings.register_link =  %}
                   {% when 'Sign up now' %}
                     <div class="register_step__item_link">
-                      <a href="{{ routes.account_login_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                      <a href="{{ routes.account_register_url }}.step_1" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
                     </div>
                   {% when 'Create an account' %}
                     <div class="register_step__item_link">
-                      <a href="{{ routes.account_register_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                      <a href="{{ routes.account_register_url }}.step_2" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
                     </div>
                   {% when 'Register your card' %}
                     <div class="register_step__item_link">
-                      <a href="{{ routes.account_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                      <a href="{{ routes.account_register_url }}.step_3" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
                     </div>
                 {% endcase %}
               {%- endif -%}
