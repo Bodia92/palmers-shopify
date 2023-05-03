@@ -54,20 +54,9 @@
                 {%- endif -%}
               </div>
               {%- if block.settings.register_link != blank -%}
-                {% case block.settings.register_link =  %}
-                  {% when 'Sign up now' %}
-                    <div class="register_step__item_link">
-                      <a href="{{ routes.account_register_url }}.step_1" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
-                    </div>
-                  {% when 'Create an account' %}
-                    <div class="register_step__item_link">
-                      <a href="{{ routes.account_register_url }}.step_2" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
-                    </div>
-                  {% when 'Register your card' %}
-                    <div class="register_step__item_link">
-                      <a href="{{ routes.account_register_url }}.step_3" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
-                    </div>
-                {% endcase %}
+                <div class="register_step__item_link">
+                  <a href="{{ block.settings.register_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                </div>
               {%- endif -%}
             </div>
           </li>
@@ -139,8 +128,13 @@
         {
           "type": "text",
           "id": "register_link",
-          "label": "Link text",
-          "default": "Register link"
+          "label": "Register link text",
+          "default": "Register link text"
+        },
+        {
+          "type": "url",
+          "id": "register_url",
+          "label": "Register link url"
         }
       ]
     }
