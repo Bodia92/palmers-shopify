@@ -31,11 +31,14 @@
         "cecfb012-e0b4-4627-be4d-e8bf5cb602d9"
       ],
       "settings": {
-        "register_title": "I’ve made an in-store Palmers purchase  but don’t have an account yet…",
+        "register_title": "I’ve made an in-store Palmers purchase  but don't have an account yet…",
         "register_descr": "Sign up now and enter the 12 digit code on your receipt to earn points towards your first reward!",
         "image": "shopify:\/\/shop_images\/sprite-1_1.png",
         "advantage_title": "<p>Why join <strong>palmers Rewards?<\/strong><\/p>",
-        "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Every $1 spend = 1 point<\/li><li>Every 100 points = $10 voucher<\/li><li>Free gift on your birthday<\/li><\/ul>"
+        "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Every $1 spend = 1 point<\/li><li>Every 100 points = $10 voucher<\/li><li>Free gift on your birthday<\/li><\/ul>",
+        "message": true,
+        "message_text": "<p>Your Palmers Rewards Number X digit number under the barcode on the back of your card.<\/p>",
+        "message_image": "shopify:\/\/shop_images\/Group_3.png"
       }
     },
     "accordion_section": {
