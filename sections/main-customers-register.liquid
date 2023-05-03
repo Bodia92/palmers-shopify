@@ -7,8 +7,8 @@
       <div class="col">
         {%- form 'create_customer', name: 'create', class: 'form form--main', id: 'create_customer' -%}
           <header class="form__header">
-            <h1 class="form__title heading h1">{{ 'customer.register.create_account' | t }}</h1>
-            <p class="form__legend">{{ 'customer.register.description' | t }}</p>
+            <h1 class="form__title heading h1">{{ section.settings.register_title | escape }}</h1>
+            <p class="form__legend">{{ section.settings.register_descr | escape }}</p>
           </header>
 
           {%- if form.errors -%}
@@ -77,6 +77,18 @@
 {
   "name": "Register",
   "settings": [
+    {
+      "type": "text",
+      "id": "register_title",
+      "label": "Register title",
+      "default": "Register title"
+    },
+    {
+      "type": "text",
+      "id": "register_descr",
+      "label": "Register description",
+      "default": "Register description"
+    },
     {
       "type": "image_picker",
       "id": "image",
