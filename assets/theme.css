@@ -4786,6 +4786,11 @@ img.lazyload[data-sizes=auto] {
   text-align: center;
 }
 
+.form__legend {
+  font-size: 16px;
+  color: #3A2A2F;
+}
+
 .form__header,
 .form__legend {
   margin-bottom: 30px;

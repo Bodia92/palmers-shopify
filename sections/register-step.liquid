@@ -53,9 +53,9 @@
                   </div>
                 {%- endif -%}
               </div>
-              {%- if block.settings.register_link != blank -%}
+              {%- if block.settings.register_link_text != blank -%}
                 <div class="register_step__item_link">
-                  <a href="{{ block.settings.register_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link | escape }}</a>
+                  <a href="{{ block.settings.register_link_url }}" class="register_step__item_btn button button--primary button--full">{{ block.settings.register_link_text | escape }}</a>
                 </div>
               {%- endif -%}
             </div>
@@ -127,13 +127,13 @@
         },
         {
           "type": "text",
-          "id": "register_link",
+          "id": "register_link_text",
           "label": "Register link text",
           "default": "Register link text"
         },
         {
           "type": "url",
-          "id": "register_url",
+          "id": "register_link_url",
           "label": "Register link url"
         }
       ]
