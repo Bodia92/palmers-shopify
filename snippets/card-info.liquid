@@ -17,11 +17,16 @@
     {%- endif -%}
     <div class="card_info__advantages">
       {%- if section.settings.advantage_title != blank -%}
-        <h2 h2 class="card_info__advantages_title">{{- section.settings.advantage_title -}}</h2>
+        <h2 class="card_info__advantages_title">{{- section.settings.advantage_title -}}</h2>
       {%- endif -%}
-      {%- if section.settings.advantage_list != blank -%}
-        <div class="card_info__advantages_list">{{- section.settings.advantage_list -}}</div>
-      {%- endif -%}
+      <div class="card_info__advantages_wrap">
+        {%- if section.settings.advantage_subtitle != blank -%}
+          <h3 class="card_info__advantages_subtitle">{{- section.settings.advantage_subtitle -}}</h3>
+        {%- endif -%}
+        {%- if section.settings.advantage_list != blank -%}
+          <div class="card_info__advantages_list">{{- section.settings.advantage_list -}}</div>
+        {%- endif -%}
+      </div>
     </div>
   </div>
   <div class="card_info__wrap">
@@ -38,8 +43,8 @@
               {%- endif -%}
 
               {%- if block.settings.item_link != blank -%}
-                <div class="card_info__item_link">
-                  <a href="{{ block.settings.item_url }}" class="card_info__item_btn button button--primary">{{ block.settings.item_link | escape }}</a>
+                <div class="card_info__item_link_in">
+                  <a href="{{ block.settings.item_url }}" class="card_info__item_link">{{ block.settings.item_link | escape }}</a>
                 </div>
               {%- endif -%}
             </div>
