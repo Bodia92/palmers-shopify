@@ -6,7 +6,7 @@
         "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-0": {
           "type": "register-item",
           "settings": {
-            "item_title": "<p>I’m completely new to <br\/><strong>Palmers Rewards<\/strong><\/p>",
+            "item_title": "<p>I’m completely new to <strong>Palmers Rewards<\/strong><\/p>",
             "item_text": "<p>Sign up to join Palmers Rewards now so you can start growing your rewards<\/p>",
             "image": "shopify:\/\/shop_images\/Card-Graphic.png",
             "register_link_text": "Sign up now",
@@ -40,8 +40,8 @@
         "template--18782736384291__b31283af-335c-4dd7-b718-5a42b8023a8f-16826801264bc0fd1f-2"
       ],
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 62,
+        "padding_bottom": 18,
         "register_title": "Register for Palmers Rewards",
         "register_descr": "<p>Select the option below that suits you best:<\/p>"
       }

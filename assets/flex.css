@@ -11,13 +11,13 @@
   }
 
   .col:nth-child(odd) {
-    padding-right: 40px;
+    padding-right: 80px;
     position: relative;
     z-index: 4;
   }
 
   .col:nth-child(even) {
-    padding-left: 40px;
+    padding-left: 80px;
   }
 
   .col:not(.col:last-child) {
