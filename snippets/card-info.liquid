@@ -39,7 +39,7 @@
 
               {%- if block.settings.item_link != blank -%}
                 <div class="card_info__item_link">
-                  <a href="#" class="card_info__item_btn button button--primary">{{ block.settings.item_link | escape }}</a>
+                  <a href="{{ block.settings.item_url }}" class="card_info__item_btn button button--primary">{{ block.settings.item_link | escape }}</a>
                 </div>
               {%- endif -%}
             </div>
