@@ -2436,7 +2436,6 @@ img.lazyload[data-sizes=auto] {
   display: block;
 }
 .button {
-  position: relative;
   display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -4753,16 +4752,9 @@ img.lazyload[data-sizes=auto] {
 .form__input-message_box{
   position: absolute;
   z-index: 1000;
-  top: -21px;
-  left: 113%;
-  width: 312px;
-
-  padding-left: 12px;
 
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-15px);
-
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -4778,7 +4770,7 @@ img.lazyload[data-sizes=auto] {
 .form__input-message:hover .form__input-message_box, .form__input-message:focus .form__input-message_box {
   opacity: 1;
   pointer-events: initial;
-  transform: translateX(0);
+  transform: translate(0);
 }
 
 
@@ -4801,15 +4793,12 @@ img.lazyload[data-sizes=auto] {
   content: '';
   position: absolute;
   z-index: 1;
-  top: 22px;
-  left: -8px;
 
   width: 16px;
   height: 16px;
 
   background-color: #fff;
 
-  transform: rotate(-45deg);
   border-top: 1px solid #e8e2dd;
   border-left: 1px solid #e8e2dd;
 }
@@ -4857,6 +4846,38 @@ img.lazyload[data-sizes=auto] {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__input-message_box{
+    top: 200%;
+    right: -29%;
+    width: 312px;
+    padding-left: 12px;
+    transform: translateX(-15px);
+  }
+
+  .form__input-message_wrap::after{
+    top: 22px;
+    left: -8px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+    .form__input-message_box{
+    top: 175%;
+    right: -30%;
+    width: 280px;
+    transform: translateY(-15px);
+  }
+
+  .form__input-message_wrap::after{
+    top: -8px;
+    left: 79%;
+
+    transform: rotate(45deg);
+  }
 }
 
 
