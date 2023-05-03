@@ -1,0 +1,77 @@
+{{ "download-app.css" | asset_url | stylesheet_tag }}
+
+<div class="download_app">
+  {%- if section.settings.download_title != blank -%}
+    <h3 class="download_app__title">{{- section.settings.download_title -}}</h3>
+  {%- endif -%}
+  {%- if section.settings.download_descr != blank -%}
+    <div class="download_app__descr">{{- section.settings.download_descr -}}</div>
+  {%- endif -%}
+  <div class="download_app__wrap">
+    {%- if section.settings.download_image != blank -%}
+      <div class="download_app__img">
+        <img
+          src="{{ section.settings.download_image | image_url }}"
+          {% if section.settings.image.alt != blank %}
+            alt="{{ section.settings.download_image.alt | escape }}"
+          {% else %}
+            alt="phone img"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      </div>
+    {%- endif -%}
+    <div class="download_app__links">
+      <a href="#" class="download_app__link">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0753/1092/4067/files/App_Store.png?v=1683104290"
+          alt="App Store"
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      </a>
+      <a href="#" class="download_app__link">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0753/1092/4067/files/Google_play.png?v=1683104290"
+          alt="Google play"
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Download app",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "download_title",
+      "label": "Title",
+      "default": "<p>Download title</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "download_descr",
+      "label": "Download description",
+      "default": "<p>Download description</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "download_image",
+      "label": "Download image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Download app"
+    }
+  ]
+}
+{% endschema %}
