@@ -1,0 +1,96 @@
+.download_app {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 44px 28px 35px;
+
+  border-radius: 5px;
+  background-color: #68a3db;
+}
+
+.download_app::before {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  content: '';
+  width: 100%;
+  height: 190px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  background-image: url(https://cdn.shopify.com/s/files/1/0753/1092/4067/files/popup_decor_bottom.svg?v=1682597075);
+}
+
+.download_app__title {
+  font-family: 'PT Sans', sans-serif;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0.89px;
+  font-weight: 400;
+  line-height: 1.18;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.download_app__title:not(.download_app__title:last-child) {
+  margin-bottom: 3px;
+}
+
+.download_app__title strong {
+  font-weight: 700;
+}
+
+.download_app__descr {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  text-align: center;
+}
+
+.download_app__descr:not(.download_app__descr:last-child) {
+  margin-bottom: 20px;
+}
+
+.download_app__wrap {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+}
+
+.download_app__img {
+  position: absolute;
+  bottom: -22px;
+  left: -13px;
+  width: 160px;
+  height: 206px;
+}
+
+.download_app__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.download_app__links {
+  margin-left: auto;
+}
+
+.download_app__link {
+  display: block;
+  width: 230px;
+  height: 76px;
+}
+
+.download_app__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
