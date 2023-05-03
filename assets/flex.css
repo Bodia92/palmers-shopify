@@ -12,6 +12,8 @@
 
   .col:nth-child(odd) {
     padding-right: 40px;
+    position: relative;
+    z-index: 4;
   }
 
   .col:nth-child(even) {

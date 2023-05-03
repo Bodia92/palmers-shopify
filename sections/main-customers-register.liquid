@@ -57,6 +57,35 @@
             <label for="customer[password]" class="form__floating-label">{{ 'customer.register.password' | t }}</label>
           </div>
 
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="general_information__value--receipt" class="form__field form__field--text"  required="required" autocomplete="value-receipt">
+            <label for="general_information__value--receipt" class="form__floating-label">Receipt Number</label>
+            <div class="form__input-message">
+              <div class="form__input-message_heading">What’s this <span>?</span></div>
+              <div class="form__input-message_box">
+                <div class="form__input-message_wrap">
+                  {%- if section.settings.message_text != blank -%}
+                    <div class="form__input-message_text">{{- section.settings.message_text -}}</div>
+                  {%- endif -%}
+                  {%- if section.settings.message_image != blank -%}
+                    <div class="form__input-message_img">
+                      <img
+                        src="{{ section.settings.message_image | image_url }}"
+                        {% if block.settings.image.alt != blank %}
+                          alt="{{ section.settings.message_image.alt | escape }}"
+                        {% else %}
+                          alt="image message"
+                        {% endif %}
+                        height="auto"
+                        width="auto"
+                      >
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <button type="submit" class="form__submit button button--primary button--full">{{ 'customer.register.submit' | t }}</button>
 
           <small class="form__spam-disclaimer">{{- 'shopify.online_store.spam_detection.disclaimer_html' | t -}}</small>
@@ -90,9 +119,13 @@
       "default": "Register description"
     },
     {
+      "type": "header",
+      "content": "advantage settings"
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "Card logo"
+      "label": "Advantages logo"
     },
     {
       "type": "richtext",
@@ -105,6 +138,21 @@
       "id": "advantage_list",
       "label": "Advantages list",
       "default": "<p>Advantages list</p>"
+    },
+    {
+      "type": "header",
+      "content": "Message input settings"
+    },
+    {
+      "type": "richtext",
+      "id": "message_text",
+      "label": "Message text",
+      "default": "<p>Message text</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "message_image",
+      "label": "Message image "
     }
   ],
   "blocks": [

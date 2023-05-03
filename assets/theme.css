@@ -4693,6 +4693,175 @@ img.lazyload[data-sizes=auto] {
   padding-bottom: 3px;
 }
 
+
+/**
+ * --------------------------------------------------------------------
+ * INPUT MESSAGE
+ * --------------------------------------------------------------------
+ */
+
+
+.form__input-message{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+
+  width: auto;
+  height: auto;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+
+
+.form__input-message_heading{
+  display: flex;
+  align-items: center;
+
+  color: #ec1556;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.11px;
+  line-height: 1.5;
+}
+
+.form__input-message_heading span{
+  position: relative;
+  z-index: 2;
+  margin-left: 8px;
+  color: #fff;
+
+}
+
+.form__input-message_heading span::after{
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  content: '';
+
+  width: 13px;
+  height: 13px;
+
+
+  background-color: #ec1556;
+  border-radius: 50%;
+  transform: translate(-50%, -44%);
+}
+
+.form__input-message_box{
+  position: absolute;
+  z-index: 1000;
+  top: -21px;
+  left: 113%;
+  width: 312px;
+
+  padding-left: 12px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-15px);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form__input-message_box::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 20px;
+  height: 100%;
+}
+
+.form__input-message:hover .form__input-message_box, .form__input-message:focus .form__input-message_box {
+  opacity: 1;
+  pointer-events: initial;
+  transform: translateX(0);
+}
+
+
+
+.form__input-message_wrap{
+  position: relative;
+  z-index: 2;
+  display: flex;
+
+  padding: 20px 24px;
+
+
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e2dd;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.form__input-message_wrap::after{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  left: -8px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #fff;
+
+  transform: rotate(-45deg);
+  border-top: 1px solid #e8e2dd;
+  border-left: 1px solid #e8e2dd;
+}
+
+.form__input-message_text{
+  color: #3a2a2f;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: left;
+}
+
+  .form__input-message_text:not(.form__input-message_text:last-child) {
+    margin-right: 10px;
+  }
+
+.form__input-message_img{
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: auto;
+  margin-left: auto;
+}
+
+.form__input-message_img::after{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 100px;
+
+  background-color: #a3d167;
+  opacity: 0.3;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__input-message_img img{
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
 /**
  * --------------------------------------------------------------------
  * INPUT ROW
@@ -5611,6 +5780,7 @@ select option {
 
 .header {
   position: relative;
+  z-index: 99;
   padding: 13px 0;
   background: var(--header-background);
   color: var(--header-text-color);
