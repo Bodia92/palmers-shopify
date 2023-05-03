@@ -6,11 +6,11 @@
         "6b4182d0-97d4-435d-93da-7483793ce34e": {
           "type": "card-item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/Card-Graphic.png",
-            "item_title": "<p>new to <strong>Palmers Rewards?<\/strong><\/p>",
-            "item_text": "<p>Sign up to join Palmers Rewards now so you can start growing your rewards!<\/p>",
-            "item_link": "Create an account now",
-            "bg_color": "orange"
+            "item_image": "shopify:\/\/shop_images\/Group_3.png",
+            "item_title": "<p>Have you made a<strong> palmers purchase in-store<\/strong> recently?<\/p>",
+            "item_text": "<p>Sign up now using the 12 digit code on your receipt to earn points towards your first reward!<\/p>",
+            "item_link": "Create an account using a receipt code",
+            "bg_color": "green_light"
           }
         },
         "cecfb012-e0b4-4627-be4d-e8bf5cb602d9": {
