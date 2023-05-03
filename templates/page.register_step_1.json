@@ -34,9 +34,9 @@
         "register_title": "I’m new to Palmers Rewards…",
         "register_descr": "Sign up to join Palmers Rewards now so you can start growing your rewards!",
         "image": "shopify:\/\/shop_images\/sprite-1_1.png",
-        "advantage_title": "<p>Why join <strong>palmers Rewards?<\/strong><\/p>",
+        "advantage_title": "<p>Every <strong>$1<\/strong> spend = <strong>1 point<\/strong><br\/>Every <strong>100 <\/strong>points = <strong>$10 voucher<\/strong><\/p>",
         "advantage_subtitle": "<p>Why join <strong>palmers Rewards?<\/strong><\/p>",
-        "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Every $1 spend = 1 point<\/li><li>Every 100 points = $10 voucher<\/li><li>Free gift on your birthday<\/li><\/ul>",
+        "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Free gift on your birthday<\/li><\/ul>",
         "message": false,
         "message_text": "<p>Message text<\/p>"
       }
