@@ -4850,8 +4850,8 @@ img.lazyload[data-sizes=auto] {
 
 @media screen and (min-width: 1200px) {
   .form__input-message_box{
-    top: 200%;
-    right: -29%;
+    top: -22px;
+    left: 112%;
     width: 312px;
     padding-left: 12px;
     transform: translateX(-15px);
@@ -4865,9 +4865,9 @@ img.lazyload[data-sizes=auto] {
 }
 
 @media screen and (max-width: 1199px) {
-    .form__input-message_box{
-    top: 175%;
-    right: -30%;
+  .form__input-message_box{
+    top: 200%;
+    right: -29%;
     width: 280px;
     transform: translateY(-15px);
   }
