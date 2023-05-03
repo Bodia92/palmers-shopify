@@ -10,16 +10,18 @@
             "item_title": "<p>new to <strong>Palmers Rewards?<\/strong><\/p>",
             "item_text": "<p>Sign up to join Palmers Rewards now so you can start growing your rewards!<\/p>",
             "item_link": "Create an account now",
+            "item_url": "shopify:\/\/pages\/register-step-1",
             "bg_color": "orange"
           }
         },
         "cecfb012-e0b4-4627-be4d-e8bf5cb602d9": {
           "type": "card-item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/Group_2.png",
-            "item_title": "<p>Already have a <strong>Palmers Rewards <\/strong>card but haven’t activated it online?<\/p>",
-            "item_text": "<p>Register your card online now using the X digit number on the back of your card<\/p>",
-            "item_link": "Register your card now",
+            "item_image": "shopify:\/\/shop_images\/Group_3.png",
+            "item_title": "<p>Have you made a <strong>palmers purchase in-store<\/strong> recently?<\/p>",
+            "item_text": "<p>Sign up now using the 12 digit code on your receipt to earn points towards your first reward!<\/p>",
+            "item_link": "Create an account using a receipt code",
+            "item_url": "shopify:\/\/pages\/register-step-2",
             "bg_color": "green_dark"
           }
         }
@@ -29,6 +31,8 @@
         "cecfb012-e0b4-4627-be4d-e8bf5cb602d9"
       ],
       "settings": {
+        "register_title": "I have an active Palmers Rewards card but haven’t activated it online yet…",
+        "register_descr": "Sign up below and register your card online now using the X digit number under the barcode on the back of your card",
         "image": "shopify:\/\/shop_images\/sprite-1_1.png",
         "advantage_title": "<p>Why join <strong>palmers Rewards?<\/strong><\/p>",
         "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Every $1 spend = 1 point<\/li><li>Every 100 points = $10 voucher<\/li><li>Free gift on your birthday<\/li><\/ul>"
