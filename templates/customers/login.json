@@ -36,7 +36,7 @@
       "settings": {
         "register_title": "Register title",
         "register_text": "Register text",
-        "link": ""
+        "link": "shopify:\/\/pages\/register-step"
       }
     },
     "accordion_section": {
