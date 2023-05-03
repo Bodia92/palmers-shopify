@@ -7,8 +7,6 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/locally-owned-banner_1800x_4fb69d38-4bfd-4e40-b159-fa352e0985ed.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/locally-owned-banner_mob.jpg",
             "show_overlay": false,
             "overlay_opacity": 30,
             "text_color": "#ffffff",
@@ -25,8 +23,6 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vegepod-Website-Front-Page-banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Vegepod-Shopify-banner-mobile.jpg",
             "show_overlay": false,
             "overlay_opacity": 30,
             "text_color": "#ffffff",
@@ -42,8 +38,6 @@
         "d2e865d4-6282-4112-a2aa-ee39826a414c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/13150-Spring-1-Shopify-desktop.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/13150-Spring-1-Shopify-mob.jpg",
             "show_overlay": false,
             "overlay_opacity": 30,
             "text_color": "#ffffff",
@@ -60,8 +54,6 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/13144-Pre-Spring-Shopify-desktop.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/13144-Pre-Spring-Shopify-mobile.jpg",
             "show_overlay": false,
             "overlay_opacity": 30,
             "text_color": "#ffffff",
@@ -165,7 +157,6 @@
       "settings": {
         "collection": "house-plants",
         "products_count": 12,
-        "image": "shopify:\/\/shop_images\/House-plants-bg.jpg",
         "background": "#8bc53f",
         "text_color": "#ffffff",
         "title": "House Plants",
@@ -183,7 +174,6 @@
           "type": "collection",
           "settings": {
             "collection": "garden-plants",
-            "image": "shopify:\/\/shop_images\/Plant-image-for-web_300x_be48e6e7-3ff1-4bf7-a11b-7f197d78009d.jpg",
             "link": ""
           }
         },
@@ -191,7 +181,6 @@
           "type": "collection",
           "settings": {
             "collection": "herbs",
-            "image": "shopify:\/\/shop_images\/Vege-and-herb-image-fr-web_300x_3f85be8d-eb5e-4e41-a952-a6aac862576d.jpg",
             "link": ""
           }
         },
@@ -199,7 +188,6 @@
           "type": "collection",
           "settings": {
             "collection": "gardening-supplies",
-            "image": "shopify:\/\/shop_images\/Gardening-accessories-Palmers_300x_5ec52b3f-02f4-4240-8c32-41c489194044.jpg",
             "link": ""
           }
         },
@@ -207,7 +195,6 @@
           "type": "collection",
           "settings": {
             "collection": "garden-tools-gloves",
-            "image": "shopify:\/\/shop_images\/Garden-tools-web-image-Palmers_300x_3261e239-5e55-42ac-915b-695af1dab114.jpg",
             "link": "shopify:\/\/collections\/garden-tools-gloves"
           }
         },
@@ -215,7 +202,6 @@
           "type": "collection",
           "settings": {
             "collection": "lawns",
-            "image": "shopify:\/\/shop_images\/Lawn-kid.jpg",
             "link": ""
           }
         },
@@ -255,6 +241,14 @@
         "link_title": "View more",
         "link_url": ""
       }
+    },
+    "d4b8b125-9ebf-4a18-bac4-cc5402042d0f": {
+      "type": "download-app",
+      "settings": {
+        "download_title": "<p>DOWNLOAD <strong>OUR APP<\/strong><\/p>",
+        "download_descr": "<p>Find detailed product info, access your <br\/>Palmers Rewards, shop & more! <\/p>",
+        "download_image": "shopify:\/\/shop_images\/phone.png"
+      }
     }
   },
   "order": [
@@ -263,6 +257,7 @@
     "163831718488b9148b",
     "1647771533bb280d6a",
     "collection-list",
-    "featured-collection"
+    "featured-collection",
+    "d4b8b125-9ebf-4a18-bac4-cc5402042d0f"
   ]
 }
