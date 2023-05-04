@@ -1,6 +1,5 @@
 .accordion {
-  padding: 60px 20px;
-  /* background-color: #f7f4f2; */
+  padding: 60px 0;
 }
 
 .accordion__list {
@@ -27,7 +26,6 @@
 .accordion__item_title {
   color: #235833;
   font-family: var(--text-font-family);
-  font-size: 26px;
   font-weight: 400;
   line-height: 1.23;
 }
@@ -81,4 +79,15 @@
 
 .accordion__item_text p:not(.accordion__item p:last-child) {
   margin-bottom: 14px;
+}
+@media screen and (min-width: 768px) {
+  .accordion__item_title {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordion__item_title {
+    font-size: 20px;
+  }
 }
