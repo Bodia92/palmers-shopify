@@ -8,7 +8,7 @@
 
 .accordion__item {
   position: relative;
-  padding: 26px 40px 26px 0;
+  padding: 22px 40px 30px 0;
 }
 
 .accordion__item:not(.accordion__item:last-child) {
@@ -34,16 +34,15 @@
 
 .accordion__item_icon {
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 40px;
+  right: 5px;
   transform: translateY(-50%);
 }
 
 .accordion__item_icon svg {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
 
-  padding: 0.6rem;
   color: #ec1556;
 
   transition: transform 0.3s ease;
@@ -70,7 +69,7 @@
 }
 
 .accordion__item_text {
-  padding-top: 3px;
+  padding-top: 8px;
   padding-bottom: 5px;
 
   color: #3a2a2f;
