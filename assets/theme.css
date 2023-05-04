@@ -4880,6 +4880,14 @@ img.lazyload[data-sizes=auto] {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .form__input-message_box .message_box--active_state {
+    opacity: 1;
+    pointer-events: initial;
+    transform: translate(0);
+  }
+}
+
 
 
 
