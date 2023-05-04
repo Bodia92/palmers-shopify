@@ -38,7 +38,7 @@
         "advantage_subtitle": "<p>Why join <strong>palmers Rewards<\/strong>?<\/p>",
         "advantage_list": "<ul><li>Exclusive Specials & Events<\/li><li>Earn Rewards Points<\/li><li>Free gift on your birthday<\/li><\/ul>",
         "message": true,
-        "message_text": "<p>Your Palmers Rewards Number X digit number under the barcode on the back of your card.<\/p>",
+        "message_text": "<p>Your Receipt Number is the X digit number that can be found at the bottom of your receipt.<\/p>",
         "message_image": "shopify:\/\/shop_images\/Group_3.png"
       }
     },
